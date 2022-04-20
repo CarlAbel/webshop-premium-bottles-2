@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body class="cart-page">
+    <header>
+        <div class="max-width-center flex-container align-center">
+            <div class="logo padding col-33">
+                <a href="index.html">
+                    <img src="img/premium-bottles-logo.png" alt="Tøjbutikken">
+                </a>
+            </div>
+            <nav class="menu padding col-66">
+                <label for="check" class="check-label">☰</label>
+                <input type="checkbox" name="" id="check">
+                <div class="menu-items">
+                    <ul class="menu-level-1">
+                        <li>
+                            <a href="index.html">Forside</a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Om os</a>
+                            <ul class="menu-level-2">
+                                <li>
+                                    <a href="handel.html">Handelsbtingelser</a>
+                                </li>
+                                <li>
+                                    <a href="privat.html">Cookies/ GDPR</a>
+                                </li>
+                                <li>
+                                    <a href="kontakt.html">Kontakt</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Champagne</a>
+                            <ul class="menu-level-2">
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=armand">Armand De Brignac</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=bollinger">Bollinger</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=carbon">Carbon</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=cristal">Cristal</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=delamotte">Delamotte</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=dom">Dom Pérignon</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=krug">Krug</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=leclerc">Leclerc Briant</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=louis">Louis Roederer</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=moet">Moét & Chandon</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=piper">Piper-Heidsieck</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=rare">Rare</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=ruinart">Ruinart</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=salon">Salon</a>
+                                </li>
+                                <li>
+                                    <a href="kat-champ.html?type=champ&cat=veuve">Veuve clicqout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Spiritus</a>
+                            <ul class="menu-level-2">
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=cognac">Cognac</a>
+                                </li>
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=gin">Gin</a>
+                                </li>
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=rom">Rom</a>
+                                </li>
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=tequila">Tequila & Mezcal</a>
+                                </li>
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=vodka">Vodka</a>
+                                </li>
+                                <li>
+                                    <a href="kat.html?type=spiritus&cat=whisky">Whisky</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="display:none;" class="menu-cart">
+                            <a href="cart.html">🛒<span class="cart-count">0</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="slider">
+        <div class="slide1"></div>
+        <div class="slide2"></div>
+        <div class="slide3"></div>
+        <h2 class="slider-text">Kurv</h2>
+    </div>
+    <main class="max-width-center">
+        <table class="cart-summary" id="cart-entries">
+            <tr>
+                <th>Antal</th>
+                <th>Prudukt</th>
+                <th>Edition</th>
+                <th>str.</th>
+                <th>Pris</th>
+            </tr>
+            
+        </table>
+        <table class="cart-summary total" id="cart-entry-total">
+            <tr class="cart-total">
+                <td>Total:</td>
+                <td></td>
+                <td id="td-cart-total"></td>
+            </tr>
+        </table>
+        <hr>
+        <form action="" id="check-out-form">
+            <input type="hidden" name="order-details" id="order-details">
+            <div>
+                <input type="text" name="customer-name" id="customer-name" placeholder="Navn">
+            </div>
+            <div>
+                <input type="text" name="customer-address" id="customer-address" placeholder="Leveringsadresse">
+            </div>
+            <div>
+                <label>Tilmeld nyhedsbrev og få gode tilbud i din inbox</label>
+                <input type="checkbox" name="customer-newsletter" id="customer-newsletter" checked="true">
+            </div>
+            <div>
+                <input type="submit" value="Køb">
+            </div>
+        </form>
+        <div>
+            <button id="keep-shopping">Shop videre</button>
+        </div>
+    </main>
+    <footer>
+        <div class="max-width-center flex-container">
+            <section class="col-33 padding">
+                <h1>PremiumBottles</h1>
+                <p>PremiumGroup er en familievirksomhed fra Hvidovre, etableret i 2014.</p>
+                <p>Vi har lager på Nordlund Vingård
+                    Byvej 55, 2650 Hvidovre</p>
+                <p>Åbningstider for lageret:
+                    Man-fre kl. 15:00-17:00</p>
+                <p>Åbningstider for kundeservice:
+                    Man-fre i tidsrummet 10:00-19:00</p>
+                <p>Top 3 bedste service i Danmark - du kan roligt skrive til os</p>
+                <p>Skriv til os på kontakt@premiumbottles.dk
+                    Ring 217 217 03</p>
+                <p>Udover Danmark leverer vi også til Belgien, Holland, Spanien, Sverige, Tyskland og Italien med DHL ECONOMY SELECT, som koster 499kr og er ikke gratis ved køb over 1500kr</p>
+            </section>
+            <section class="col-33 padding">
+                <h1>Information</h1>
+                <p>Om PremiumBottles</a>
+                
+                <p>Betaling</p>
+                
+                <p>Levering & Fragtinfo</p>
+                
+                <p>Handelsbetingelser</p>
+                
+                <p>Cookie og privatlivspolitik (GDPR)</p>
+                
+                <p>B2B</p>
+                
+                <p>Fødevarestyrelsens smiley-rapporter</p>
+                
+                <p>Blog</p>
+                
+                <p>Trustpilot</p>
+                
+                <p>Del din betaling op med Viabill</p>
+                
+            </section>
+            <section class="col-33 padding">
+                <h1>Tilmeld dig nyhedsbrevet</h1>
+                <input type="text" name="" id="" value="Indtast din e-mailadresse her">
+                <input type="submit" value="Tilmeld">
+            </section>
+        </div>
+
+    </footer>
+    
+    <script src="cart.js"></script>
+    <script>
+        if (localStorage.getItem("cartTable")){
+            document.querySelector(".menu-cart").style.display="list-item";
+            document.querySelector(".cart-count").innerHTML = localStorage.getItem("cartAmount");
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@keyframes layer2Anim {
+    0%{opacity:0;}
+    17%{opacity:0;}
+    33%{opacity:1;}
+    50%{opacity:1;}
+    67%{opacity:0;}
+    100%{opacity:0;}
+}
+@keyframes layer3Anim {
+    0%{opacity:0;}
+    50%{opacity:0;}
+    67%{opacity:1;}
+    83%{opacity:1;}
+    100%{opacity:0;}
+}
+
+div .homepage-bg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-btn{
+    
+    width:100%;
+    
+ 
+}
+
+
+.slider{
+    position: relative;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider div{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left: 0;
+    top:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.slide1{
+    background-image: url(img/crystal-vodka-rainbow-magnum-6.jpg);
+}
+.slide2{
+    background-image: url(img/deadhead-edition-monkey-head-rom.jpg);
+    animation: layer2Anim 12s infinite;
+}
+.slide3{
+    background-image: url(img/diplomatico-edition-reserva-exclusiva-rom.jpg);
+    animation: layer3Anim 12s infinite;
+}
+.slider-text{
+    position:absolute;
+    color:#fff;
+    text-shadow: 2px 2px 5px #000;
+    z-index: 1;
+}
+
+.slider:after{
+    content: "";
+    position:absolute;
+    width:100%;
+    height:100%;
+    left: 0;
+    top:0;
+    background: rgba(0, 0, 0, 0.1);
+}
